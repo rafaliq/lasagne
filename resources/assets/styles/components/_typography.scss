@@ -25,14 +25,20 @@
 
   @extend %text;
 
-  &--after {
-    &::after {
-      content: "";
+  &--section {
+    @include cssLock("font-size", 360, $container, (32, 60));
+
+    text-transform: none;
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+
+    &::before {
+      content: url(images/leaf.png);
+      position: absolute;
       display: block;
-      width: 2px;
-      height: 60px;
-      background-color: $primary-dark;
-      margin: gutter(3) auto gutter(5);
+      right: 59%;
+      top: -20%;
     }
   }
 }

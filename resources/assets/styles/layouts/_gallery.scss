@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: gutter(2);
-  margin: gutter(10) auto;
+  margin: gutter(8) auto;
   padding: 0;
 
   @include media("<md") {
