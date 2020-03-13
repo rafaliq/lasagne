@@ -1,0 +1,23 @@
+.button {
+  color: $white;
+  font-size: 1.2rem;
+  font-family: $font-main;
+  padding: gutter(0.8) gutter(3);
+  line-height: 35px;
+  display: inline-block;
+  border: 1px solid $white;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &::before {
+    top: 0;
+    left: -200%;
+    transition: all 0.7s;
+  }
+
+  &:hover {
+    color: $black;
+    background-color: $white;
+    text-decoration: none;
+  }
+}
