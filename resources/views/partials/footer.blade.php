@@ -1,9 +1,10 @@
 <section class="section">
-  @if(get_field('show_map'))
-    {!! do_shortcode('[google_map_easy id="1"]') !!}
-  @endif
+  <div class="container">
+    @if(get_field('show_map'))
+      {!! do_shortcode('[google_map_easy id="1"]') !!}
+    @endif
+  </div>
 </section>
-
 <footer class="footer">
   <div class="container">
     <div class="footer__row">
