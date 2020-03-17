@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/lasagne/wp-content/themes/lasagne",
-  "devUrl": "http://localhost:8080/lasagne",
+  "devUrl": "http://localhost/lasagne",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

@@ -1,3 +1,9 @@
+<section class="section">
+  @if(get_field('show_map'))
+    {!! do_shortcode('[google_map_easy id="1"]') !!}
+  @endif
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__row">
@@ -12,18 +18,3 @@
     </div>
   </div>
 </footer>
-{{-- <script>
-  $(function() {
-      $('.form').on('submit', function (e) {
-        e.preventDefault();
-        $.ajax({
-          type: 'post',
-          url: 'https://centrumzdrowiarehroz.pl/mail.php',
-          data: $(this).serialize(),
-          success: function () {
-            alert('Wiadomość została wysłana!');
-          }
-        });
-      });
-  });
-</script> --}}
