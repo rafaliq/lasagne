@@ -24,11 +24,11 @@
         @endif
       </nav>
       <div class="header__button">
-        <a href="#">
+        <a href="#" style="text-decoration: none;">
           <i class="fab fa-facebook-square header__icon"></i>
         </a>
-        <a href="tel:{{ str_replace(' ','', get_option_field('phone')) }}" class="button">
-          89 741 21 15
+        <a href="tel:{{ str_replace(' ','', get_option_field('phone')) }}" class="button button--small">
+          {{ get_option_field('phone')  }}
         </a>
       </div>
     </div>

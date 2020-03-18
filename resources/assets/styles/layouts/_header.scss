@@ -46,12 +46,14 @@
 
   &__icon {
     color: $white;
-    font-size: gutter(5.8);
-    margin-right: gutter(3);
+    font-size: gutter(4.7);
+    margin-right: gutter(2);
     display: block;
+    text-decoration: none;
 
     &:hover {
       color: $primary;
+      text-decoration: none;
     }
   }
 

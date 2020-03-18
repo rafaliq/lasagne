@@ -2,8 +2,7 @@
   color: $white;
   font-size: 1.2rem;
   font-family: $font-main;
-  padding: gutter(0.8) gutter(3);
-  line-height: 35px;
+  padding: gutter(1) gutter(3);
   display: inline-block;
   border: 1px solid $white;
   text-transform: uppercase;
@@ -13,6 +12,10 @@
     color: $black;
     background-color: $white;
     text-decoration: none;
+  }
+
+  &--small {
+    padding: gutter(0.6) gutter(1.5);
   }
 
   &--dark {
