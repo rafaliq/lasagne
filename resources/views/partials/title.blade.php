@@ -1,5 +1,5 @@
-<h2>
-	<span class="title title--section">
+<div class="text--center">
+	<h2 class="title title--section">
 		{{ $data['title'] }}
-	</span>
-</h2>
+	</h2>
+</div>
