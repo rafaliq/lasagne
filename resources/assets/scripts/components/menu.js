@@ -13,19 +13,23 @@ const menu = {
 
   addEvent() {
     const { ATTR, CLASS } = CONFIG;
-    this.triggers.forEach(button => {
-      let name = button.getAttribute(ATTR);
-
-      button.addEventListener('click', (event) => {
+    this.triggers.forEach(item => {
+      let name = item.getAttribute(ATTR);
+      item.addEventListener('click', (event) => {
         let target = event.currentTarget;
         event.preventDefault();
         console.log(name);
-        this.triggers.forEach(trigger => {
-          trigger.classList.remove(CLASS);
-        });
+        this.removeActiveClass();
         target.classList.add(CLASS);
       });
     })
+  },
+
+  removeActiveClass() {
+    const { CLASS } = CONFIG;
+    this.triggers.forEach(trigger => {
+      trigger.classList.remove(CLASS);
+    });
   },
 };
 

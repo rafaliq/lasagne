@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     max-width: gutter(80);
-    margin: auto;
+    margin: gutter(2) auto;
   }
 
   &__button {
@@ -27,6 +27,15 @@
     &--active {
       background-color: $primary;
       color: $white;
+
+      &:hover {
+        color: $white;
+      }
     }
+  }
+
+  &__content {
+    box-shadow: $shadow;
+    padding: gutter(4);
   }
 }

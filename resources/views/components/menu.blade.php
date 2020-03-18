@@ -42,6 +42,12 @@
           Napoje
         </a>
       </div>
+      <div class="menu__main">
+        {{-- <img class="menu__img" src="@asset('./images/pizzabg.jpg')" alt="pizza"> --}}
+        <div class="menu__content menu__content--active" menu-content="pizza">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquam in quam fuga placeat. Earum, dolor est. Similique voluptatum itaque dolores nobis voluptatibus vero officia, corporis quo, reiciendis, unde repudiandae?
+        </div>
+      </div>
     </div>
   </div>
 </section>
