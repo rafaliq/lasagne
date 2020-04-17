@@ -1,6 +1,6 @@
 .header {
   color: $white;
-  font-size: 1.2rem;
+  font-size: 17px;
   text-transform: uppercase;
   font-weight: $medium;
   font-family: $font-main;
@@ -9,7 +9,7 @@
   transition: $transition;
   position: fixed;
   top: 0;
-  padding: gutter(1);
+  padding: gutter(0.5);
 
   &--hide {
     background: $black;

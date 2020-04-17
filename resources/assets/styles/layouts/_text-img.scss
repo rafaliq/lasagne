@@ -2,10 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+
+  @include media("<lg") {
+    flex-wrap: wrap;
+  }
 
   &__img {
     width: auto;
     height: gutter(50);
+
+    @include media("<lg") {
+      @include cssLock("height", 360, 992, (225, 350));
+
+      width: 100%;
+    }
   }
 
   &__photo {
@@ -21,5 +32,11 @@
     display: block;
     box-shadow: $shadow;
     margin-left: - gutter(5);
+
+    @include media("<lg") {
+      width: 100%;
+      margin: 0;
+      padding: gutter(2) gutter(4);
+    }
   }
 }

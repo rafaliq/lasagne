@@ -6,7 +6,7 @@ a,
   transition: $transition;
 
   &:hover {
-    color: darken($primary, 20);
+    color: saturate($primary, 30%);
     text-decoration: underline;
   }
 }

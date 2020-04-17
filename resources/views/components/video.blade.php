@@ -1,8 +1,5 @@
 <section>
   <div class="video">
-    <video class="video__bg" playsinline autoplay muted loop poster>
-      <source src="{{ $data['video']['url'] }}" type="video/mp4">
-    </video>
     <div class="container">
       <div class="video__content">
         <h1>
@@ -20,5 +17,8 @@
         @endif
       </div>
     </div>
+    <video class="video__bg" playsinline autoplay muted loop poster>
+      <source src="{{ $data['video']['url'] }}" type="video/mp4">
+    </video>
   </div>
 </section>

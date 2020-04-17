@@ -25,24 +25,33 @@
 
   @extend %text;
 
+  &--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      @include cssLock("width", 360, $container, (40, 80));
+
+      height: auto;
+    }
+  }
+
   &--section {
     @include cssLock("font-size", 360, $container, (32, 60));
 
     text-transform: none;
     text-align: center;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
+    margin: 0;
     position: relative;
 
-    &::before {
-      content: url("../images/leaf.png");
-      position: absolute;
-      display: block;
-      left: - gutter(9);
-      top: -20%;
-    }
+    // &::before {
+    //   content: url("../images/leaf.png");
+    //   position: absolute;
+    //   display: block;
+    //   left: - gutter(9);
+    //   top: -20%;
+    // }
   }
 }
 
