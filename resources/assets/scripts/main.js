@@ -11,7 +11,6 @@ import aboutUs from './routes/about';
 import hamburger from './components/hamburger';
 import header from './components/header';
 import menu from './components/menu';
-import slider from './components/slider';
 import preloader from './components/preloader';
 
 
@@ -32,8 +31,5 @@ jQuery(document).ready(() => {
   menu.init();
   preloader.init();
   hamburger.init();
-  if($('.main-carousel').length) {
-    slider.init();
-  }
 });
 

@@ -9,7 +9,7 @@
   transition: $transition;
   position: fixed;
   top: 0;
-  padding: gutter(2);
+  padding: gutter(1);
 
   &--hide {
     background: $black;
@@ -23,7 +23,7 @@
 
   &__brand {
     img {
-      height: gutter(9);
+      height: gutter(8);
       width: auto;
       margin: $gutter;
     }

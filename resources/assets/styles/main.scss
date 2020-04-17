@@ -4,7 +4,6 @@
 
 // @import library;
 @import "node_modules/include-media/dist/include-media.scss";
-@import "~flickity/css/flickity.css";
 @import "~animate.css";
 @import "vendors/scss-lock/css-lock";
 
@@ -35,6 +34,7 @@
 @import "layouts/contact";
 @import "layouts/footer";
 @import "layouts/slider";
+@import "layouts/video";
 @import "layouts/text-img";
 @import "layouts/icons";
 @import "layouts/section";
