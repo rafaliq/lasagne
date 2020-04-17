@@ -2,7 +2,10 @@
   <div class="main-carousel">
       @foreach ($data['baner'] as $ban)
         <div class="slider carousel-cell">
-          <img class="slider_bg" src="{{ $ban['image']['url'] }}" alt="{{ $data['image']['alt'] }}">
+          {{-- <img class="slider_bg" src="{{ $ban['image']['url'] }}" alt="{{ $data['image']['alt'] }}"> --}}
+          <video class="slider__bg" playsinline autoplay muted loop poster>
+            <source src="{{ $ban['video']['url'] }}" type="video/mp4">
+          </video>
           <div class="container">
             <div class="slider__content">
               <h1>

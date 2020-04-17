@@ -15,6 +15,7 @@ $slider
     ->addRepeater('baner', ['min' => 0, 'layout' => 'block'])
         ->addImage('image', ['label' => 'Tło'])
             ->setInstructions('Wybierz tło slidera')
+        ->addFile('video', ['label' => 'Filmik'])
         ->addText('title', ['label' => 'Tytuł'])
         ->addWysiwyg('desc', ['label' => 'Opis', 'media_upload' => 0])
         ->addLink('link', ['label' => 'Link']);

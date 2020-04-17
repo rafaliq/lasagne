@@ -37,7 +37,7 @@
     position: relative;
 
     &::before {
-      content: url(images/leaf.png);
+      content: url("../images/leaf.png");
       position: absolute;
       display: block;
       left: - gutter(9);

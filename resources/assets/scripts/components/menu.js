@@ -15,6 +15,7 @@ const menu = {
     const { ATTR, CLASS } = CONFIG;
     this.triggers.forEach(item => {
       let name = item.getAttribute(ATTR);
+
       item.addEventListener('click', (event) => {
         let target = event.currentTarget;
         event.preventDefault();
