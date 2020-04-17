@@ -9,11 +9,10 @@ $config = (object) [
     'wrapper' => ['width' => 30],
 ];
 
-$hero = new FieldsBuilder('hero', ['label' => 'hero']);
+$hero = new FieldsBuilder('hero', ['label' => 'Hero']);
 
 $hero
-    ->addImage('image', ['label' => 'Tło'])
-    ->addText('header', ['label' => 'tytuł'])
-    ->addText('subheader', ['label' => 'podtytuł']);
+    ->addFile('bg', ['label' => 'Tło'])
+    ->addText('title', ['label' => 'Tytuł']);
 
 return $hero;

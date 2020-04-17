@@ -1,7 +1,9 @@
 <section class="section section--color">
   <div class="container">
     @if($data['title'])
-      @include('partials.title', ['title' => $data['title']])
+      <div class="gallery__title">
+          @include('partials.title', ['title' => $data['title']])
+      </div>
     @endif
     <div class="gallery">
       @php
@@ -15,10 +17,12 @@
         </div>  
       @endforeach
     </div>
-    <div class="button--center">
-      <a href="#" class="button button--dark button--center">
-        Więcej
-      </a>
-    </div>
+    @if($data['button'])
+      <div class="button--center">
+        <a href="{{ $data['link']['url'] }}" class="button button--dark button--center">
+          {{ $data['link']['title'] }}
+        </a>
+      </div>
+    @endif
   </div>
 </section>
