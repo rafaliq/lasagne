@@ -29,7 +29,7 @@
     margin: auto;
     text-align: center;
     transform: translateX(-50%);
-    max-width: gutter(65);
+    max-width: gutter(70);
     z-index: 500;
 
     @include media("<=md") {
@@ -40,5 +40,10 @@
   &__text {
     line-height: 34px;
     font-size: 20px;
+
+    @include media("<md") {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 }

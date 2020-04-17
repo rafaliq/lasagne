@@ -2,12 +2,20 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: auto auto;
+  grid-template-columns: gutter(35) 1fr;
+
+  @include media("<lg") {
+    grid-template-columns: 1fr;
+  }
 
   &__map {
     width: 100%;
     height: gutter(60);
     overflow: hidden;
+
+    @include media("<lg") {
+      height: gutter(35);
+    }
   }
 
   &__content {
@@ -17,6 +25,13 @@
     box-shadow: $shadow;
     margin-right: - gutter(5);
     z-index: 200;
+
+    @include media("<lg") {
+      padding: gutter(1.5) gutter(2);
+      margin: 0;
+      grid-row: 2;
+      text-align: center;
+    }
 
     p {
       padding: gutter(0.5) 0;

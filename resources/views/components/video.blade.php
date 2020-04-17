@@ -1,7 +1,7 @@
 <section>
   <div class="video">
-    <div class="container">
-      <div class="video__content">
+    <div class="video__content">
+      <div class="container">
         <h1>
           <span class="headline video__title">
             {{ $data['title'] }}
