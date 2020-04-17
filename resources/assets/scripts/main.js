@@ -1,6 +1,3 @@
-// import external dependencies
-import 'jquery';
-
 // Import everything from autoload
 import './autoload/**/*';
 
@@ -13,7 +10,6 @@ import aboutUs from './routes/about';
 //import header from './components/header';
 import hamburger from './components/hamburger';
 import header from './components/header';
-import submenu from './components/submenu';
 import menu from './components/menu';
 import slider from './components/slider';
 import preloader from './components/preloader';
@@ -33,11 +29,9 @@ const routes = new Router({
 jQuery(document).ready(() => {
   routes.loadEvents();
   header.init();
-  submenu.init();
   menu.init();
   preloader.init();
   hamburger.init();
-  //new WOW.WOW.init();
   if($('.main-carousel').length) {
     slider.init();
   }
