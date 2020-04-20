@@ -32,8 +32,35 @@
     }
   }
 
+  &__main {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  &__img {
+    padding: gutter(10) 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   &__content {
+    background: $white;
     box-shadow: $shadow;
     padding: gutter(4);
+    margin: auto;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: gutter(3);
   }
 }

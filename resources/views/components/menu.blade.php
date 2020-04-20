@@ -3,51 +3,65 @@
     @if($data['title'])
       @include('partials.title', ['title' => $data['title']])
     @endif
+  </div>
     <div class="menu">
-      <div class="menu__buttons">
-        <a href="#" class="menu__button menu__button--active" menu-button="pizza">
-          Pizza
-        </a>
-        <a href="#" class="menu__button" menu-button="burger">
-          Burger
-        </a>
-        <a href="#" class="menu__button" menu-button="salatki">
-          Sałatki
-        </a>
-        <a href="#" class="menu__button" menu-button="obiady">
-          Obiady
-        </a>
-        <a href="#" class="menu__button" menu-button="sniadania">
-          Śniadania
-        </a>
-        <a href="#" class="menu__button" menu-button="fastfood">
-          Fast food
-        </a>
-        <a href="#" class="menu__button" menu-button="zupy">
-          Zupy
-        </a>
-        <a href="#" class="menu__button" menu-button="ryby">
-          Ryby
-        </a>
-        <a href="#" class="menu__button" menu-button="makarony">
-          Makarony
-        </a>
-        <a href="#" class="menu__button" menu-button="desery">
-          Desery
-        </a>
-        <a href="#" class="menu__button" menu-button="dzieci">
-          Dla dzieci
-        </a>
-        <a href="#" class="menu__button" menu-button="pizza">
-          Napoje
-        </a>
+      <div class="container">
+        <div class="menu__buttons">
+          @foreach(get_option_field("menu") as $item)
+            <a href="#" class="menu__button @if($loop->first) menu__button--active @endif" menu-button="{{ $item['content']['title'] }}">
+              {{ $item['content']['title'] }}
+            </a>
+          @endforeach
+        </div>
       </div>
-      <div class="menu__main">
-        {{-- <img class="menu__img" src="@asset('./images/pizzabg.jpg')" alt="pizza"> --}}
-        <div class="menu__content menu__content--active" menu-content="pizza">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquam in quam fuga placeat. Earum, dolor est. Similique voluptatum itaque dolores nobis voluptatibus vero officia, corporis quo, reiciendis, unde repudiandae?
+      <div class="menu__main text">
+        <div class="menu__bg">
+          <img class="menu__img" src="@asset('./images/pizzabg.jpg')" alt="pizza">
+        </div>
+        <div class="container menu__content menu__content--active" menu-content="pizza">
+          <div class="menu__columns">
+            <table class="table">
+              @foreach(get_option_field("menu")[0]['content']['list'] as $item)
+                @php
+                  $half = $loop->count/2
+                @endphp
+                @if($loop->iteration <= $half)
+                  <tr>
+                    <td>
+                      <span class="text--bold">
+                        {{ $loop->index+1 }}. {{ $item['name'] }}
+                      </span>
+                      <br>
+                      ({{ $item['desc'] }})
+                    </td>
+                    <td>{{ $item['price'] }} zł</td>
+                    <td>{{ $item['price2'] }} zł</td>
+                  </tr>
+                @endif
+              @endforeach
+            </table>
+            <table class="table">
+              @foreach(get_option_field("menu")[0]['content']['list'] as $item)
+                @php
+                  $half = $loop->count/2
+                @endphp
+                @if($loop->iteration > $half)
+                  <tr>
+                    <td>
+                      <span class="text--bold">
+                        {{ $loop->index+1 }}. {{ $item['name'] }}
+                      </span>
+                      <br>
+                      ({{ $item['desc'] }})
+                    </td>
+                    <td>{{ $item['price'] }} zł</td>
+                    <td>{{ $item['price2'] }} zł</td>
+                  </tr>
+                @endif
+              @endforeach
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
