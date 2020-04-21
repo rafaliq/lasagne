@@ -56,11 +56,37 @@
     box-shadow: $shadow;
     padding: gutter(4);
     margin: auto;
+    display: none;
+    min-height: gutter(80);
+
+    &--active {
+      display: block;
+    }
   }
 
   &__columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: gutter(3);
+    gap: 0 gutter(4);
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    gap: gutter(1.5);
+    align-items: center;
+    border-bottom: 1px solid $gray;
+    padding: gutter(0.5) 0;
+
+    &--th {
+      border: 0;
+    }
+
+    &--col3 {
+      display: grid;
+      grid-template-columns: 6fr 1fr 1fr;
+      gap: gutter(1.5);
+      align-items: center;
+    }
   }
 }
