@@ -55,12 +55,15 @@
                 </div>
               </div>
             @endif
-            <div class="menu__columns" style="grid-auto-flow: column; grid-template-rows: repeat({{ $countrows }}, 1fr);">
+            <div class="menu__columns @if($content['columns'] == '1') menu__columns--one @endif" style="grid-auto-flow: column; grid-template-rows: repeat({{ $countrows }}, 1fr);">
               @foreach($content['list'] as $item)
-                <div class="menu__row @if($content['menu-type'] == 'pizza') menu__row--col3 @endif">
+                <div class="menu__row @if($content['columns'] == '1') menu__row--space @endif @if($content['menu-type'] == 'pizza') menu__row--col3 @endif">
                     <div>
                       <span class="text--bold">
-                        {{ $loop->index+1 }}. {{ $item['name'] }}
+                        @if($content['menu-type'] == 'pizza')
+                          {{ $loop->index+1 }}.
+                        @endif
+                        {{ $item['name'] }}
                       </span>
                       @if($item['desc'])
                         <br>

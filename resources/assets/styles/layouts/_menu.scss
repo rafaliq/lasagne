@@ -77,6 +77,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 gutter(4);
+
+    &--one {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row !important;
+    }
   }
 
   &__row {
@@ -89,6 +94,10 @@
 
     &--th {
       border: 0;
+    }
+
+    &--space {
+      padding: gutter(2);
     }
 
     &--col3 {

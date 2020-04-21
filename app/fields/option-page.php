@@ -18,6 +18,8 @@ $option_page
                 ->addText('title', ['label' => 'Tytuł'])
                 ->addSelect('menu-type', ['label'=>'Typ menu'])
                     ->addChoices('pizza', 'inne')
+                ->addSelect('columns', ['label'=>'Kolumny'])
+                    ->addChoices('1', '2')
                 ->addTextarea('size1', ['rows' => 2, 'label' => 'Rozmiar 1', 'wrapper' => ['width' => '50%']])
                     ->conditional('menu-type', '==', 'pizza')
                 ->addTextarea('size2', ['rows' => 2, 'label' => 'Rozmiar 2', 'wrapper' => ['width' => '50%']])
