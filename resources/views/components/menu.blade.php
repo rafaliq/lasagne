@@ -15,14 +15,19 @@
         </div>
       </div>
       <div class="menu__main text">
-        <div class="menu__bg">
-          <img class="menu__img" src="@asset('./images/pizzabg.jpg')" alt="pizza">
-        </div>
+        @foreach(get_option_field("menu") as $item)
+          @php
+            $bg = $item['content']['bg']
+          @endphp
+          <div class="menu__bg @if($loop->first) menu__bg--active @endif" menu-bg="{{ $item['content']['title'] }}">
+            <img class="menu__img" src="{{ $bg['url'] }}" alt="{{ $bg['alt'] }}">
+          </div>
+        @endforeach
         @foreach(get_option_field("menu") as $item)
           @php
             $content = $item['content']
           @endphp
-          <div class="container menu__content @if($loop->first) menu__content--active @endif" menu-content="{{ $content['title'] }}">
+          <div class="container menu__content @if($loop->first) menu__content--active @endif" menu-content="{{ $item['content']['title'] }}">
             @php
               $countrows = count($content['list'])/2;
             @endphp

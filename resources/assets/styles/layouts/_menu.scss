@@ -6,6 +6,7 @@
     align-items: center;
     max-width: gutter(80);
     margin: gutter(2) auto;
+    overflow: hidden;
   }
 
   &__button {
@@ -41,6 +42,12 @@
     width: 100%;
     height: 100%;
     z-index: -2;
+    opacity: 0;
+    transition: 1.5s;
+
+    &--active {
+      opacity: 1;
+    }
   }
 
   &__img {
@@ -56,11 +63,13 @@
     box-shadow: $shadow;
     padding: gutter(4);
     margin: auto;
-    display: none;
     min-height: gutter(80);
+    transition: $transition;
+    display: none;
 
     &--active {
       display: block;
+      animation: fromleft 1.5s both;
     }
   }
 
