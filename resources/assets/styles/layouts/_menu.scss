@@ -19,6 +19,12 @@
     font-weight: $bold;
     text-transform: uppercase;
 
+    @include media("<lg") {
+      padding: gutter(0.4) gutter(0.5);
+      font-size: 14px;
+      margin: gutter(0.8);
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -63,13 +69,23 @@
     box-shadow: $shadow;
     padding: gutter(4);
     margin: auto;
-    min-height: gutter(80);
     transition: $transition;
     display: none;
 
+    @include media(">lg") {
+      min-height: gutter(80);
+    }
+
+    @include media("<=md") {
+      padding: gutter(1.5);
+    }
+
     &--active {
       display: block;
-      animation: fromleft 1.5s both;
+
+      @include media(">=lg") {
+        animation: fromleft 1.5s both;
+      }
     }
   }
 
@@ -77,6 +93,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 gutter(4);
+
+    @include media("<=lg") {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row !important;
+
+      &--size {
+        display: none;
+      }
+    }
 
     &--one {
       grid-template-columns: 1fr;
@@ -97,12 +122,12 @@
     }
 
     &--space {
-      padding: gutter(2);
+      padding: gutter(2) 0;
     }
 
     &--col3 {
       display: grid;
-      grid-template-columns: 6fr 1fr 1fr;
+      grid-template-columns: 5fr 1fr 1fr;
       gap: gutter(1.5);
       align-items: center;
     }

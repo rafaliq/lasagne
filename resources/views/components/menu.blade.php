@@ -32,7 +32,7 @@
               $countrows = count($content['list'])/2;
             @endphp
             @if($content['menu-type'] == 'pizza')
-              <div class="menu__columns">
+              <div class="menu__columns menu__columns--size">
                 <div class="menu__row menu__row--th menu__row--col3">
                   <div>
                   </div>

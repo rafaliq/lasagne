@@ -43,6 +43,26 @@
     display: flex;
     align-items: center;
 
+    &--mobile {
+      display: none;
+
+      @include media("<lg") {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: gutter(5) auto 0;
+
+        a {
+          margin: gutter(1);
+
+          i {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+
     @include media("<lg") {
       display: none;
     }

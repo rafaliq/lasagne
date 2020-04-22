@@ -5,12 +5,13 @@
   justify-content: center;
   grid-gap: gutter(3);
   text-align: center;
-  margin-top: - gutter(18);
+  margin-top: - gutter(23);
   z-index: 200;
 
   @include media("<lg") {
     grid-template-columns: 1fr 1fr;
     grid-gap: gutter(1);
+    margin-top: - gutter(18);
 
     &__item:last-child {
       display: none;
@@ -18,7 +19,7 @@
   }
 
   &__item {
-    @include cssLock("padding", 360, $container, (15, 50));
+    @include cssLock("padding", 360, $container, (15, 40));
 
     background-color: $white;
     border-radius: gutter(5) gutter(5) 0 0;
