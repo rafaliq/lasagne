@@ -4,5 +4,10 @@
 		<h2 class="title title--section">
 			{{ $data['title'] }}
 		</h2>
+		@if($menu)
+			<a class="button button--pdf" href="{{ $menu['url'] }}">
+				PDF
+			</a>
+		@endif
 	</div>
 @endif

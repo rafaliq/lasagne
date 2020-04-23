@@ -23,7 +23,7 @@
             ]) !!}
         @endif
         <div class="header__button--mobile">
-          <a href="{{ get_option_field("logo") }}" style="text-decoration: none;">
+          <a href="{{ get_option_field("facebook") }}" style="text-decoration: none;">
             <i class="fab fa-facebook-square header__icon"></i>
           </a>
           <a href="tel:{{ str_replace(' ','', get_option_field('phone')) }}" class="button button--small">
@@ -32,7 +32,7 @@
         </div>
       </nav>
       <div class="header__button">
-        <a href="{{ get_option_field("logo") }}" style="text-decoration: none;">
+        <a href="{{ get_option_field("facebook") }}" style="text-decoration: none;">
           <i class="fab fa-facebook-square header__icon"></i>
         </a>
         <a href="tel:{{ str_replace(' ','', get_option_field('phone')) }}" class="button button--small">

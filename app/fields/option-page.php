@@ -11,6 +11,7 @@ $option_page
 
 $option_page
     ->addTab('Menu', ['placement' => 'left'])
+        ->addFile('menu-pdf', ['label' => 'Menu PDF'])
         ->addRepeater('menu')
             ->addGroup('content', ['label'=> 'Menu'])
                 ->addAccordion('Ustawienia menu')

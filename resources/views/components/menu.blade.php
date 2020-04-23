@@ -1,7 +1,7 @@
 <section class="section">
   <div class="container">
     @if($data['title'])
-      @include('partials.title', ['title' => $data['title']])
+      @include('partials.title', ['title' => $data['title'], 'menu' => get_option_field("menu-pdf")])
     @endif
   </div>
     <div class="menu">

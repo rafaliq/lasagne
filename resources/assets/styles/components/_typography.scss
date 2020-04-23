@@ -31,7 +31,7 @@
     justify-content: center;
 
     img {
-      @include cssLock("width", 360, $container, (40, 80));
+      @include cssLock("width", 360, $container, (60, 80));
 
       height: auto;
     }
