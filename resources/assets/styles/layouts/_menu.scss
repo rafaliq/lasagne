@@ -109,6 +109,22 @@
     }
   }
 
+  &__table {
+    margin-top: gutter(5);
+  }
+
+  &__title {
+    @include cssLock("font-size", 360, $container, (18, 22));
+
+    display: block;
+    margin-bottom: gutter(2);
+    padding: 0;
+  }
+
+  &__text {
+    margin-top: gutter(4);
+  }
+
   &__row {
     display: grid;
     grid-template-columns: 7fr 1fr;
