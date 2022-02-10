@@ -81,7 +81,7 @@
     "bootstrap": "v4.2.1",
     "include-media": "^1.4.9",
     "jquery": "^3.3.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "popper.js": "^1.14.6",
     "wow.js": "^1.2.2",
     "wowjs": "^1.1.3"
